@@ -38,7 +38,7 @@ class ApiService {
       final imageUrl2 = productData1['image-urls'][7];
       final description2 = productData1['name'];
       final imageUrl3 = productData2['image-urls'][1];
-      final description3 = productData['name'];
+      final description3 = productData2['name'];
 
       // Create a Product object
       return Product(

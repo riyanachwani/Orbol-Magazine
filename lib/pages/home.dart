@@ -393,7 +393,7 @@ class _HomePageState extends State<HomePage> {
                                     child: Column(
                                       children: [
                                         Text(
-                                          product.description2,
+                                          product.description3,
                                           style: GoogleFonts.cabin(
                                             fontWeight: FontWeight.w400,
                                             fontSize: 20,
@@ -446,7 +446,7 @@ class _HomePageState extends State<HomePage> {
                                     child: Column(
                                       children: [
                                         Text(
-                                          product.description2,
+                                          product.name1,
                                           style: GoogleFonts.cabin(
                                             fontWeight: FontWeight.w400,
                                             fontSize: 20,
