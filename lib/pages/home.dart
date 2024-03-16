@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:orbol_magazine/utils/api_services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key});
@@ -21,8 +22,8 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: Center(
-          child: Image.asset(
-            "assets/images/appbar.png",
+          child: SvgPicture.asset(
+            "assets/images/appbar.svg",
             width: 500,
             height: 100,
           ),
@@ -49,14 +50,14 @@ class _HomePageState extends State<HomePage> {
                         Container(
                           width: double.infinity,
                           height: 300,
-                          child: Image.asset("assets/images/stack.png"),
+                          child: SvgPicture.asset("assets/images/cein.svg"),
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(
                               vertical: 30, horizontal: 22),
                           child: Text(
                             "Treat Your Body Like Your Face",
-                            style: GoogleFonts.gothicA1(
+                            style: GoogleFonts.spaceGrotesk(
                               color: Colors.white,
                               fontSize: 15.0,
                               fontWeight: FontWeight.w300,

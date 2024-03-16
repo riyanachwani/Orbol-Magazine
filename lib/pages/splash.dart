@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orbol_magazine/utils/routes.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -24,9 +25,15 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
         body: Center(
       child: Container(
-        child: Image.asset("assets/images/logo.png"),
+        child: SvgPicture.asset(
+          'assets/images/logo.svg',
+          width: 100,
+          height: 100,
+          alignment: Alignment.center,
+        ),
       ),
     ));
   }

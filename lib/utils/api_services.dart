@@ -18,7 +18,7 @@ class ApiService {
     if (response.statusCode == 200) {
       final jsonData = json.decode(response.body);
 
-      final productData1 = jsonData['data'][29]['attributes'];
+      final productData1 = jsonData['data'][3]['attributes'];
 
       final productData = jsonData['data'][1]['attributes'];
       final productData2 = jsonData['data'][0]['attributes'];
@@ -29,13 +29,13 @@ class ApiService {
       final description1 = productData1['description'];
 
       // Extracting data for PAGE2
-      final imageUrl = productData['image-urls'][3];
+      final imageUrl = productData['image-urls'][0];
       final name = productData['name'];
       final description = productData['description'];
 
       // Extracting data for PAGE4
 
-      final imageUrl2 = productData1['image-urls'][7];
+      final imageUrl2 = productData1['image-urls'][0];
       final description2 = productData1['name'];
       final imageUrl3 = productData2['image-urls'][1];
       final description3 = productData2['name'];
