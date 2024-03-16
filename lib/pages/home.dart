@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:orbol_magazine/utils/api_services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -50,30 +51,29 @@ class _HomePageState extends State<HomePage> {
                         Container(
                           width: double.infinity,
                           height: 300,
-                          child: SvgPicture.asset("assets/images/cein.svg"),
+                          child: Image.asset("assets/images/stack.png"),
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(
                               vertical: 30, horizontal: 22),
                           child: Text(
                             "Treat Your Body Like Your Face",
-                            style: GoogleFonts.spaceGrotesk(
+                            style: GoogleFonts.gothicA1(
                               color: Colors.white,
-                              fontSize: 15.0,
+                              fontSize: 18.0,
                               fontWeight: FontWeight.w300,
                             ),
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 22),
-                          child: Text(
-                            product.name1.toUpperCase(),
-                            style: GoogleFonts.gayathri(
-                              color: Colors.white,
-                              fontSize: 35.0,
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
+                          child: Text("HH" + product.name1.toUpperCase(),
+                              style: TextStyle(
+                                fontFamily: 'MarisaMedium',
+                                color: Colors.white,
+                                fontSize: 35.0,
+                                fontWeight: FontWeight.w400,
+                              )),
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(
@@ -549,14 +549,14 @@ class _HomePageState extends State<HomePage> {
             IconButton(
               icon: Stack(
                 children: [
-                  Image.asset("assets/images/homeicon.png"),
+                  SvgPicture.asset("assets/images/houselogo.svg"),
                   if (_selectedIndex == 0)
                     Positioned(
-                      top: 10,
+                      top: 20,
                       left: 0,
                       right: 0,
-                      child: Image.asset(
-                        "assets/images/line.png",
+                      child: SvgPicture.asset(
+                        "assets/images/line.svg",
                         width: 20,
                         height: 10,
                       ),
@@ -568,14 +568,14 @@ class _HomePageState extends State<HomePage> {
             IconButton(
               icon: Stack(
                 children: [
-                  Image.asset("assets/images/search.png"),
+                  SvgPicture.asset("assets/images/searchlogo.svg"),
                   if (_selectedIndex == 1)
                     Positioned(
-                      top: 10,
+                      top: 30,
                       left: 0,
                       right: 0,
-                      child: Image.asset(
-                        "assets/images/line.png",
+                      child: SvgPicture.asset(
+                        "assets/images/line.svg",
                         width: 20,
                         height: 10,
                       ),
@@ -585,20 +585,20 @@ class _HomePageState extends State<HomePage> {
               onPressed: () => setState(() => _selectedIndex = 1),
             ),
             IconButton(
-              icon: Image.asset("assets/images/oicon.png"),
+              icon: SvgPicture.asset("assets/images/ologo.svg"),
               onPressed: () {},
             ),
             IconButton(
               icon: Stack(
                 children: [
-                  Image.asset("assets/images/save.png"),
+                  SvgPicture.asset("assets/images/savelogo.svg"),
                   if (_selectedIndex == 3)
                     Positioned(
-                      top: 10,
+                      top: 0,
                       left: 0,
                       right: 0,
-                      child: Image.asset(
-                        "assets/images/line.png",
+                      child: SvgPicture.asset(
+                        "assets/images/line.svg",
                         width: 20,
                         height: 10,
                       ),
@@ -610,14 +610,14 @@ class _HomePageState extends State<HomePage> {
             IconButton(
               icon: Stack(
                 children: [
-                  Image.asset("assets/images/person.png"),
+                  SvgPicture.asset("assets/images/peoplelogo.svg"),
                   if (_selectedIndex == 4)
                     Positioned(
-                      top: 10,
+                      top: -2,
                       left: 0,
                       right: 0,
-                      child: Image.asset(
-                        "assets/images/line.png",
+                      child: SvgPicture.asset(
+                        "assets/images/line.svg",
                         width: 20,
                         height: 10,
                       ),
