@@ -66,6 +66,12 @@ flutter:
     - family: Brown
       fonts:
         - asset: assets/fonts/Brown.ttf
+    - family: Varent
+      fonts:
+        - asset: assets/fonts/Varent.otf
+    - family: Clash
+      fonts:
+        - asset: assets/fonts/Clash.otf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

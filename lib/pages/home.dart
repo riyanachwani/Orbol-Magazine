@@ -61,20 +61,20 @@ class _HomePageState extends State<HomePage> {
                           child: Image.asset("assets/images/stack.png"),
                         ),
                         Padding(
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 30, horizontal: 22),
+                          padding: const EdgeInsets.only(
+                              top: 30, bottom: 20, left: 22, right: 22),
                           child: Text(
                             "Treat Your Body Like Your Face",
-                            style: GoogleFonts.gothicA1(
+                            style: TextStyle(
+                              fontFamily: 'Clash',
                               color: Colors.white,
-                              fontSize: 18.0,
-                              fontWeight: FontWeight.w300,
+                              fontSize: 20,
                             ),
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 22),
-                          child: Text("HH" + product.name1.toUpperCase(),
+                          child: Text(product.name1.toUpperCase(),
                               style: TextStyle(
                                 fontFamily: 'MarisaMedium',
                                 color: Colors.white,
@@ -88,14 +88,12 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                product.description1,
-                                style: GoogleFonts.cabin(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 20,
-                                ),
-                              ),
+                              Text(product.description1,
+                                  style: TextStyle(
+                                    fontFamily: 'Brown',
+                                    color: Colors.white,
+                                    fontSize: 20.0,
+                                  )),
                               SizedBox(
                                 width: 40,
                                 height: 70,
@@ -146,19 +144,22 @@ class _HomePageState extends State<HomePage> {
                     return Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          width: double.infinity,
-                          height: 400,
-                          child: Image.network(product.imageUrl),
+                        Padding(
+                          padding: const EdgeInsets.all(18.0),
+                          child: Container(
+                            width: double.infinity,
+                            height: 400,
+                            child: Image.network(product.imageUrl),
+                          ),
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 22),
                           child: Text(
                             product.name,
-                            style: GoogleFonts.raleway(
-                              fontSize: 40.0, // Adjust font size as needed
-                              fontWeight: FontWeight.w300, // Light weight
-                              fontStyle: FontStyle.italic,
+                            style: TextStyle(
+                              fontFamily: 'Varent',
+                              color: Colors.black,
+                              fontSize: 45,
                             ),
                           ),
                         ),
@@ -168,13 +169,12 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                product.description,
-                                style: GoogleFonts.cabin(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 20,
-                                ),
-                              ),
+                              Text(product.description,
+                                  style: TextStyle(
+                                    fontFamily: 'Brown',
+                                    color: Colors.black,
+                                    fontSize: 20.0,
+                                  )),
                               SizedBox(
                                 height: 20,
                               ),
@@ -207,16 +207,12 @@ class _HomePageState extends State<HomePage> {
                             ),
                             child: Row(
                               children: [
-                                Text(
-                                  'Read More',
-                                  style: GoogleFonts.chivo(
-                                    textStyle: TextStyle(
+                                Text('Read More',
+                                    style: TextStyle(
+                                      fontFamily: 'Clash',
                                       color: Colors.black,
                                       fontSize: 20.0,
-                                      fontWeight: FontWeight.w100,
-                                    ),
-                                  ),
-                                ),
+                                    )),
                                 const SizedBox(width: 10.0),
                                 Padding(
                                   padding: const EdgeInsets.only(left: 55.0),
@@ -264,42 +260,38 @@ class _HomePageState extends State<HomePage> {
                           children: [
                             Padding(
                               padding: const EdgeInsets.only(
-                                  top: 100, bottom: 30, left: 22),
+                                  top: 100, bottom: 25, left: 22),
+                              child: Text("Revitalize Your Body",
+                                  style: TextStyle(
+                                    fontFamily: 'Clash',
+                                    color: Colors.white,
+                                    fontSize: 20.0,
+                                  )),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 22, vertical: 0),
                               child: Text(
-                                "Revitalize Your Body",
-                                style: GoogleFonts.gothicA1(
+                                product.name.toUpperCase(),
+                                style: TextStyle(
+                                  fontFamily: 'MarisaMedium',
                                   color: Colors.white,
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.w300,
+                                  fontSize: 35.0,
                                 ),
                               ),
                             ),
                             Padding(
                               padding: const EdgeInsets.symmetric(
-                                  horizontal: 22, vertical: 10),
-                              child: Text(
-                                product.name1.toUpperCase(),
-                                style: GoogleFonts.gayathri(
-                                  color: Colors.white,
-                                  fontSize: 35.0,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 24),
+                                  vertical: 20, horizontal: 24),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    product.description1,
-                                    style: GoogleFonts.cabin(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 20,
-                                    ),
-                                  ),
+                                  Text(product.description1,
+                                      style: TextStyle(
+                                        fontFamily: 'Brown',
+                                        color: Colors.white,
+                                        fontSize: 20.0,
+                                      )),
                                   SizedBox(height: 40.0),
                                   Padding(
                                     padding: const EdgeInsets.only(
@@ -321,16 +313,12 @@ class _HomePageState extends State<HomePage> {
                                           Padding(
                                             padding: const EdgeInsets.only(
                                                 left: 0.0),
-                                            child: Text(
-                                              'Discover More',
-                                              style: GoogleFonts.chivo(
-                                                textStyle: TextStyle(
+                                            child: Text('Discover More',
+                                                style: TextStyle(
+                                                  fontFamily: 'Clash',
                                                   color: Colors.white,
                                                   fontSize: 20.0,
-                                                  fontWeight: FontWeight.w100,
-                                                ),
-                                              ),
-                                            ),
+                                                )),
                                           ),
                                           SizedBox(width: 10.0),
                                           Padding(
@@ -376,14 +364,12 @@ class _HomePageState extends State<HomePage> {
                         Padding(
                           padding: const EdgeInsets.only(
                               top: 40, left: 22, bottom: 30),
-                          child: Text(
-                            "March 2024",
-                            style: GoogleFonts.raleway(
-                              fontSize: 40.0,
-                              fontWeight: FontWeight.w300,
-                              fontStyle: FontStyle.italic,
-                            ),
-                          ),
+                          child: Text("March 2024",
+                              style: TextStyle(
+                                fontFamily: 'Varent',
+                                color: Colors.black,
+                                fontSize: 40.0,
+                              )),
                         ),
                         Row(
                           children: [
@@ -391,7 +377,7 @@ class _HomePageState extends State<HomePage> {
                               child: Column(
                                 children: [
                                   Image.network(
-                                    product.imageUrl3,
+                                    product.imageUrl1,
                                     width:
                                         MediaQuery.of(context).size.width / 2,
                                   ),
@@ -400,13 +386,12 @@ class _HomePageState extends State<HomePage> {
                                         horizontal: 22, vertical: 50),
                                     child: Column(
                                       children: [
-                                        Text(
-                                          product.description3,
-                                          style: GoogleFonts.cabin(
-                                            fontWeight: FontWeight.w400,
-                                            fontSize: 20,
-                                          ),
-                                        ),
+                                        Text(product.description3,
+                                            style: TextStyle(
+                                              fontFamily: 'Brown',
+                                              color: Colors.black,
+                                              fontSize: 18.0,
+                                            )),
                                         SizedBox(height: 30),
                                         TextButton(
                                           onPressed: null,
@@ -416,16 +401,12 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: Row(
                                             children: [
-                                              Text(
-                                                'Read More',
-                                                style: GoogleFonts.chivo(
-                                                  textStyle: TextStyle(
+                                              Text('Read More',
+                                                  style: TextStyle(
+                                                    fontFamily: 'Clash',
                                                     color: Colors.black,
-                                                    fontSize: 20.0,
-                                                    fontWeight: FontWeight.w100,
-                                                  ),
-                                                ),
-                                              ),
+                                                    fontSize: 18.0,
+                                                  )),
                                               const SizedBox(width: 10.0),
                                               Icon(
                                                 Icons.arrow_forward_outlined,
@@ -453,13 +434,12 @@ class _HomePageState extends State<HomePage> {
                                         horizontal: 22, vertical: 50),
                                     child: Column(
                                       children: [
-                                        Text(
-                                          product.name1,
-                                          style: GoogleFonts.cabin(
-                                            fontWeight: FontWeight.w400,
-                                            fontSize: 20,
-                                          ),
-                                        ),
+                                        Text(product.name1,
+                                            style: TextStyle(
+                                              fontFamily: 'Brown',
+                                              color: Colors.black,
+                                              fontSize: 18.0,
+                                            )),
                                         SizedBox(height: 30),
                                         TextButton(
                                           onPressed: null,
@@ -469,16 +449,12 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: Row(
                                             children: [
-                                              Text(
-                                                'Read More',
-                                                style: GoogleFonts.chivo(
-                                                  textStyle: TextStyle(
+                                              Text('Read More',
+                                                  style: TextStyle(
+                                                    fontFamily: 'Clash',
                                                     color: Colors.black,
-                                                    fontSize: 20.0,
-                                                    fontWeight: FontWeight.w100,
-                                                  ),
-                                                ),
-                                              ),
+                                                    fontSize: 18.0,
+                                                  )),
                                               const SizedBox(width: 10.0),
                                               Icon(
                                                 Icons.arrow_forward_outlined,
@@ -523,16 +499,12 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.only(left: 24.0, bottom: 50),
               child: Row(
                 children: [
-                  Text(
-                    'All Articles',
-                    style: GoogleFonts.chivo(
-                      textStyle: TextStyle(
+                  Text('All Articles',
+                      style: TextStyle(
+                        fontFamily: 'Clash',
                         color: Colors.black,
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.w100,
-                      ),
-                    ),
-                  ),
+                        fontSize: 18.0,
+                      )),
                   const SizedBox(width: 10.0),
                   Icon(
                     Icons.arrow_forward_outlined,
@@ -546,117 +518,176 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
 
-      bottomNavigationBar: Container(
-        color: Colors.white,
-        height: 75,
-        padding: EdgeInsets.all(10.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Column(
-              children: [
-                SizedBox(
-                  height: 10, // Adjust the gap between the icon and the line
-                  width: 30, // Adjust the width to ensure consistent layout
-                  child: _selectedIndex == 0
-                      ? SvgPicture.asset("assets/images/line.svg")
-                      : SizedBox.shrink(),
-                ),
-                InkWell(
-                  onTap: () {
-                    setState(() {
-                      _selectedIndex = 0;
-                    });
-                  },
-                  child: SvgPicture.asset(
-                    "assets/images/houselogo.svg",
-                    //height: 20, // Adjust the size of the icon
+      bottomNavigationBar: ClipRect(
+        clipBehavior: Clip.antiAlias,
+        child: Container(
+          color: Colors.white,
+          height: 75,
+          padding: EdgeInsets.only(left: 10.0, right: 10.0), // Adjusted padding
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Column(
+                children: [
+                  SizedBox(
+                    height: 5.0, // Adjust padding as needed
+                    width: 28,
+                    child: _selectedIndex == 0
+                        ? Container(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(
+                                      20.0), // Adjust the radius as needed
+                                  bottomRight: Radius.circular(
+                                      20.0), // Adjust the radius as needed
+                                ),
+                              ),
+                            ),
+                          )
+                        : SizedBox.shrink(),
                   ),
-                ),
-              ],
-            ),
-            Column(
-              children: [
-                SizedBox(
-                  height: 10, // Adjust the gap between the icon and the line
-                  width: 30, // Adjust the width to ensure consistent layout
-                  child: _selectedIndex == 1
-                      ? SvgPicture.asset("assets/images/line.svg")
-                      : SizedBox.shrink(),
-                ),
-                InkWell(
-                  onTap: () {
-                    setState(() {
-                      _selectedIndex = 1;
-                    });
-                  },
-                  child: SvgPicture.asset(
-                    "assets/images/searchlogo.svg",
-                    //height: 20, // Adjust the size of the icon
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        _selectedIndex = 0;
+                      });
+                    },
+                    child: SizedBox(
+                      height: 50,
+                      child: SvgPicture.asset(
+                        "assets/images/houselogo.svg",
+                      ),
+                    ),
                   ),
-                ),
-              ],
-            ),
-            Column(
-              children: [
-                InkWell(
-                  onTap: () {
-                    setState(() {
-                      _selectedIndex = 2;
-                    });
-                  },
-                  child: SvgPicture.asset(
-                    "assets/images/ologo.svg",
-                    //height: 20, // Adjust the size of the icon
+                ],
+              ),
+              Column(
+                children: [
+                  SizedBox(
+                    height: 5.0, // Adjust padding as needed
+                    width: 28,
+                    child: _selectedIndex == 1
+                        ? Container(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(
+                                      20.0), // Adjust the radius as needed
+                                  bottomRight: Radius.circular(
+                                      20.0), // Adjust the radius as needed
+                                ),
+                              ),
+                            ),
+                          )
+                        : SizedBox.shrink(),
                   ),
-                ),
-              ],
-            ),
-            Column(
-              children: [
-                SizedBox(
-                  height: 10, // Adjust the gap between the icon and the line
-                  width: 30, // Adjust the width to ensure consistent layout
-                  child: _selectedIndex == 3
-                      ? SvgPicture.asset("assets/images/line.svg")
-                      : SizedBox.shrink(),
-                ),
-                InkWell(
-                  onTap: () {
-                    setState(() {
-                      _selectedIndex = 3;
-                    });
-                  },
-                  child: SvgPicture.asset(
-                    "assets/images/savelogo.svg",
-                    // height: 20, // Adjust the size of the icon
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        _selectedIndex = 1;
+                      });
+                    },
+                    child: SizedBox(
+                      height: 50,
+                      child: SvgPicture.asset(
+                        "assets/images/searchlogo.svg",
+                      ),
+                    ),
                   ),
-                ),
-              ],
-            ),
-            Column(
-              children: [
-                SizedBox(
-                  height: 10, // Adjust the gap between the icon and the line
-                  width: 30, // Adjust the width to ensure consistent layout
-                  child: _selectedIndex == 4
-                      ? SvgPicture.asset("assets/images/line.svg")
-                      : SizedBox.shrink(),
-                ),
-                InkWell(
-                  onTap: () {
-                    setState(() {
-                      _selectedIndex = 4;
-                    });
-                  },
-                  child: SvgPicture.asset(
-                    "assets/images/peoplelogo.svg",
-                    // height: 20, // Adjust the size of the icon
+                ],
+              ),
+              Column(
+                children: [
+                  InkWell(
+                    onTap: () {
+                      // Handle onTap action here if needed
+                    },
+                    child: SizedBox(
+                      height: 60,
+                      child: SvgPicture.asset(
+                        "assets/images/ologo.svg",
+                      ),
+                    ),
                   ),
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+              Column(
+                children: [
+                  SizedBox(
+                    height: 5.0, // Adjust padding as needed
+                    width: 28,
+                    child: _selectedIndex == 2
+                        ? Container(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(
+                                      20.0), // Adjust the radius as needed
+                                  bottomRight: Radius.circular(
+                                      20.0), // Adjust the radius as needed
+                                ),
+                              ),
+                            ),
+                          )
+                        : SizedBox.shrink(),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        _selectedIndex = 2;
+                      });
+                    },
+                    child: SizedBox(
+                      height: 50,
+                      child: SvgPicture.asset(
+                        "assets/images/savelogo.svg",
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  SizedBox(
+                    height: 5.0, // Adjust padding as needed
+                    width: 28,
+                    child: _selectedIndex == 3
+                        ? Container(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(
+                                      20.0), // Adjust the radius as needed
+                                  bottomRight: Radius.circular(
+                                      20.0), // Adjust the radius as needed
+                                ),
+                              ),
+                            ),
+                          )
+                        : SizedBox.shrink(),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        _selectedIndex = 3;
+                      });
+                    },
+                    child: SizedBox(
+                      height: 50,
+                      child: SvgPicture.asset(
+                        "assets/images/peoplelogo.svg",
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
