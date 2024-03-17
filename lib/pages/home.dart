@@ -554,7 +554,6 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Column(
-              mainAxisSize: MainAxisSize.min,
               children: [
                 SizedBox(
                   height: 10, // Adjust the gap between the icon and the line
@@ -571,13 +570,12 @@ class _HomePageState extends State<HomePage> {
                   },
                   child: SvgPicture.asset(
                     "assets/images/houselogo.svg",
-                    height: 20, // Adjust the size of the icon
+                    //height: 20, // Adjust the size of the icon
                   ),
                 ),
               ],
             ),
             Column(
-              mainAxisSize: MainAxisSize.min,
               children: [
                 SizedBox(
                   height: 10, // Adjust the gap between the icon and the line
@@ -594,15 +592,13 @@ class _HomePageState extends State<HomePage> {
                   },
                   child: SvgPicture.asset(
                     "assets/images/searchlogo.svg",
-                    height: 20, // Adjust the size of the icon
+                    //height: 20, // Adjust the size of the icon
                   ),
                 ),
               ],
             ),
             Column(
-              mainAxisSize: MainAxisSize.min,
               children: [
-                // No line for ologo
                 InkWell(
                   onTap: () {
                     setState(() {
@@ -611,13 +607,12 @@ class _HomePageState extends State<HomePage> {
                   },
                   child: SvgPicture.asset(
                     "assets/images/ologo.svg",
-                    height: 20, // Adjust the size of the icon
+                    //height: 20, // Adjust the size of the icon
                   ),
                 ),
               ],
             ),
             Column(
-              mainAxisSize: MainAxisSize.min,
               children: [
                 SizedBox(
                   height: 10, // Adjust the gap between the icon and the line
@@ -634,13 +629,12 @@ class _HomePageState extends State<HomePage> {
                   },
                   child: SvgPicture.asset(
                     "assets/images/savelogo.svg",
-                    height: 20, // Adjust the size of the icon
+                    // height: 20, // Adjust the size of the icon
                   ),
                 ),
               ],
             ),
             Column(
-              mainAxisSize: MainAxisSize.min,
               children: [
                 SizedBox(
                   height: 10, // Adjust the gap between the icon and the line
@@ -657,7 +651,7 @@ class _HomePageState extends State<HomePage> {
                   },
                   child: SvgPicture.asset(
                     "assets/images/peoplelogo.svg",
-                    height: 20, // Adjust the size of the icon
+                    // height: 20, // Adjust the size of the icon
                   ),
                 ),
               ],
