@@ -95,10 +95,13 @@ class _HomePageState extends State<HomePage> {
                                     fontSize: 20.0,
                                   )),
                               SizedBox(
-                                width: 40,
-                                height: 70,
-                                child: Image.asset(
-                                  "assets/images/mainimg.png",
+                                height: 15,
+                              ),
+                              SizedBox(
+                                width: 20,
+                                height: 30,
+                                child: SvgPicture.asset(
+                                  "assets/images/savewhite.svg",
                                 ),
                               ),
                               SizedBox(
@@ -176,13 +179,13 @@ class _HomePageState extends State<HomePage> {
                                     fontSize: 20.0,
                                   )),
                               SizedBox(
-                                height: 20,
+                                height: 15,
                               ),
                               SizedBox(
-                                //width: 80,
-                                height: 35,
-                                child: Image.asset(
-                                  "assets/images/save1.png",
+                                width: 20,
+                                height: 30,
+                                child: SvgPicture.asset(
+                                  "assets/images/saveblack.svg",
                                 ),
                               ),
                               SizedBox(
@@ -213,7 +216,7 @@ class _HomePageState extends State<HomePage> {
                                       color: Colors.black,
                                       fontSize: 20.0,
                                     )),
-                                const SizedBox(width: 10.0),
+                                const SizedBox(width: 20.0),
                                 Padding(
                                   padding: const EdgeInsets.only(left: 55.0),
                                   child: Icon(
@@ -320,7 +323,7 @@ class _HomePageState extends State<HomePage> {
                                                   fontSize: 20.0,
                                                 )),
                                           ),
-                                          SizedBox(width: 10.0),
+                                          SizedBox(width: 20.0),
                                           Padding(
                                             padding: const EdgeInsets.only(
                                                 left: 13.0),
@@ -407,7 +410,7 @@ class _HomePageState extends State<HomePage> {
                                                     color: Colors.black,
                                                     fontSize: 18.0,
                                                   )),
-                                              const SizedBox(width: 10.0),
+                                              const SizedBox(width: 20.0),
                                               Icon(
                                                 Icons.arrow_forward_outlined,
                                                 color: Colors.black,
@@ -455,7 +458,7 @@ class _HomePageState extends State<HomePage> {
                                                     color: Colors.black,
                                                     fontSize: 18.0,
                                                   )),
-                                              const SizedBox(width: 10.0),
+                                              const SizedBox(width: 20.0),
                                               Icon(
                                                 Icons.arrow_forward_outlined,
                                                 color: Colors.black,
@@ -505,7 +508,7 @@ class _HomePageState extends State<HomePage> {
                         color: Colors.black,
                         fontSize: 18.0,
                       )),
-                  const SizedBox(width: 10.0),
+                  const SizedBox(width: 20.0),
                   Icon(
                     Icons.arrow_forward_outlined,
                     color: Colors.black,
