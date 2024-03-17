@@ -28,4 +28,4 @@ Ensure you have:
 
   OR
 
-- Download the app from [Google Drive](https://drive.google.com/file/d/1msf7v_MYfGdC-VhgxsuMGxrbQHxsiE7w/view?usp=drive_link).
+- Download the app from [Google Drive](https://drive.google.com/drive/folders/1EPXC_Z2xfc2Ewq-iIlNVKZFeJ_9AjkKn?usp=drive_link).
