@@ -389,7 +389,7 @@ class _HomePageState extends State<HomePage> {
                                         horizontal: 22, vertical: 50),
                                     child: Column(
                                       children: [
-                                        Text(product.description3,
+                                        Text(product.description2,
                                             style: TextStyle(
                                               fontFamily: 'Brown',
                                               color: Colors.black,
@@ -437,7 +437,7 @@ class _HomePageState extends State<HomePage> {
                                         horizontal: 22, vertical: 50),
                                     child: Column(
                                       children: [
-                                        Text(product.name1,
+                                        Text(product.description3,
                                             style: TextStyle(
                                               fontFamily: 'Brown',
                                               color: Colors.black,
