@@ -13,9 +13,16 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
+  bool _showOverlay = false;
   late Future<Product?> _productFuture = ApiService().fetchProductDetails();
   Color customColor = Color(0xFF333333);
   Color customColor1 = Color(0xFFcdcbc0);
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+      _showOverlay = !_showOverlay; // Toggle overlay visibility on tap
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -503,11 +510,11 @@ class _HomePageState extends State<HomePage> {
             //Page 4 END
 
             Divider(
-              thickness: 4.0, // Adjust thickness as needed
-              color: Colors.black, // Set desired separator color
-              height: 0.0, // Adjust spacing above and below the line (optional)
-              indent: 20.0, // Adjust left indentation (optional)
-              endIndent: 20.0, // Adjust right indentation (optional)
+              thickness: 4.0,
+              color: Colors.black,
+              height: 0.0,
+              indent: 20.0,
+              endIndent: 20.0,
             ),
 
             SizedBox(height: 50),
@@ -539,92 +546,121 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
 
-      //NAVIGATOR
       bottomNavigationBar: Container(
         color: Colors.white,
         height: 75,
+        padding: EdgeInsets.all(10.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            IconButton(
-              icon: Stack(
-                children: [
-                  SvgPicture.asset("assets/images/houselogo.svg"),
-                  if (_selectedIndex == 0)
-                    Positioned(
-                      top: 20,
-                      left: 0,
-                      right: 0,
-                      child: SvgPicture.asset(
-                        "assets/images/line.svg",
-                        width: 20,
-                        height: 10,
-                      ),
-                    ),
-                ],
-              ),
-              onPressed: () => setState(() => _selectedIndex = 0),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SizedBox(
+                  height: 10, // Adjust the gap between the icon and the line
+                  width: 30, // Adjust the width to ensure consistent layout
+                  child: _selectedIndex == 0
+                      ? SvgPicture.asset("assets/images/line.svg")
+                      : SizedBox.shrink(),
+                ),
+                InkWell(
+                  onTap: () {
+                    setState(() {
+                      _selectedIndex = 0;
+                    });
+                  },
+                  child: SvgPicture.asset(
+                    "assets/images/houselogo.svg",
+                    height: 20, // Adjust the size of the icon
+                  ),
+                ),
+              ],
             ),
-            IconButton(
-              icon: Stack(
-                children: [
-                  SvgPicture.asset("assets/images/searchlogo.svg"),
-                  if (_selectedIndex == 1)
-                    Positioned(
-                      top: 30,
-                      left: 0,
-                      right: 0,
-                      child: SvgPicture.asset(
-                        "assets/images/line.svg",
-                        width: 20,
-                        height: 10,
-                      ),
-                    ),
-                ],
-              ),
-              onPressed: () => setState(() => _selectedIndex = 1),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SizedBox(
+                  height: 10, // Adjust the gap between the icon and the line
+                  width: 30, // Adjust the width to ensure consistent layout
+                  child: _selectedIndex == 1
+                      ? SvgPicture.asset("assets/images/line.svg")
+                      : SizedBox.shrink(),
+                ),
+                InkWell(
+                  onTap: () {
+                    setState(() {
+                      _selectedIndex = 1;
+                    });
+                  },
+                  child: SvgPicture.asset(
+                    "assets/images/searchlogo.svg",
+                    height: 20, // Adjust the size of the icon
+                  ),
+                ),
+              ],
             ),
-            IconButton(
-              icon: SvgPicture.asset("assets/images/ologo.svg"),
-              onPressed: () {},
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                // No line for ologo
+                InkWell(
+                  onTap: () {
+                    setState(() {
+                      _selectedIndex = 2;
+                    });
+                  },
+                  child: SvgPicture.asset(
+                    "assets/images/ologo.svg",
+                    height: 20, // Adjust the size of the icon
+                  ),
+                ),
+              ],
             ),
-            IconButton(
-              icon: Stack(
-                children: [
-                  SvgPicture.asset("assets/images/savelogo.svg"),
-                  if (_selectedIndex == 3)
-                    Positioned(
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      child: SvgPicture.asset(
-                        "assets/images/line.svg",
-                        width: 20,
-                        height: 10,
-                      ),
-                    ),
-                ],
-              ),
-              onPressed: () => setState(() => _selectedIndex = 3),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SizedBox(
+                  height: 10, // Adjust the gap between the icon and the line
+                  width: 30, // Adjust the width to ensure consistent layout
+                  child: _selectedIndex == 3
+                      ? SvgPicture.asset("assets/images/line.svg")
+                      : SizedBox.shrink(),
+                ),
+                InkWell(
+                  onTap: () {
+                    setState(() {
+                      _selectedIndex = 3;
+                    });
+                  },
+                  child: SvgPicture.asset(
+                    "assets/images/savelogo.svg",
+                    height: 20, // Adjust the size of the icon
+                  ),
+                ),
+              ],
             ),
-            IconButton(
-              icon: Stack(
-                children: [
-                  SvgPicture.asset("assets/images/peoplelogo.svg"),
-                  if (_selectedIndex == 4)
-                    Positioned(
-                      top: -2,
-                      left: 0,
-                      right: 0,
-                      child: SvgPicture.asset(
-                        "assets/images/line.svg",
-                        width: 20,
-                        height: 10,
-                      ),
-                    ),
-                ],
-              ),
-              onPressed: () => setState(() => _selectedIndex = 4),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SizedBox(
+                  height: 10, // Adjust the gap between the icon and the line
+                  width: 30, // Adjust the width to ensure consistent layout
+                  child: _selectedIndex == 4
+                      ? SvgPicture.asset("assets/images/line.svg")
+                      : SizedBox.shrink(),
+                ),
+                InkWell(
+                  onTap: () {
+                    setState(() {
+                      _selectedIndex = 4;
+                    });
+                  },
+                  child: SvgPicture.asset(
+                    "assets/images/peoplelogo.svg",
+                    height: 20, // Adjust the size of the icon
+                  ),
+                ),
+              ],
             ),
           ],
         ),
