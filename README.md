@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="#ORBOL-Magazine"></a>
-   ORBOL: Magazine 📰
+   ORBOL: Magazine📰
 </h1>
 
 ## `Project Title`
